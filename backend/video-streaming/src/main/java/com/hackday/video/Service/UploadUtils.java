@@ -42,7 +42,7 @@ public class UploadUtils {
         FFmpeg ffmpeg = new FFmpeg(ffmpegPath+"ffmpeg");		// ffmpeg 파일 경로
         FFprobe ffprobe = new FFprobe(ffmpegPath+"ffprobe");	// ffprobe 파일 경로
         FFmpegBuilder builder = new FFmpegBuilder()
-                .setInput(inputPath) // input path와 output path가 붙어있지 않으면 오류 남...
+                .setInput(inputPath) 
                 .addOutput(outputPath)
                 .addExtraArgs("-codec:", "copy") //코덱
                 .addExtraArgs("-start_number", "0") //0부터시작
